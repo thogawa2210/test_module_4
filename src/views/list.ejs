@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" id="">
+<head>
+    <title>List Employee</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>Employee Management</h1>
+
+<a href="/create" type="button" class="btn btn-success">Add New</a>
+
+<h3>Branch: CEO</h3>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">Employee Code</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Branch</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(let employee of employeesCEO){%>
+    <tr>
+        <th scope="row"><a href="/detail/<%=employee._id%>"><%=employee.code%></a></th>
+        <td><%=employee.name%></td>
+        <td><%=employee.age%></td>
+        <td><%=employee.salary%></td>
+        <td><%=employee.branch%></td>
+        <td>
+            <a href="/update/<%=employee._id%>" type="button" class="btn btn-primary">Update</a>
+            <a href="/delete/<%=employee._id%>" type="button" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+
+<h3>Branch: IT</h3>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">Employee Code</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Branch</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(let employeeIT of employeesIT){%>
+    <tr>
+        <th scope="row"><a href="/detail/<%=employeeIT._id%>"><%=employeeIT.code%></a></th>
+        <td><%=employeeIT.name%></td>
+        <td><%=employeeIT.age%></td>
+        <td><%=employeeIT.salary%></td>
+        <td><%=employeeIT.branch%></td>
+        <td>
+            <a href="/update/<%=employeeIT._id%>" type="button" class="btn btn-primary">Update</a>
+            <a href="/delete/<%=employeeIT._id%>" type="button" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+
+<h3>Branch: Security</h3>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">Employee Code</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Branch</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(let employee of employeesSe){%>
+    <tr>
+        <th scope="row"><a href="/detail/<%=employee._id%>"><%=employee.code%></a></th>
+        <td><%=employee.name%></td>
+        <td><%=employee.age%></td>
+        <td><%=employee.salary%></td>
+        <td><%=employee.branch%></td>
+        <td>
+            <a href="/update/<%=employee._id%>" type="button" class="btn btn-primary">Update</a>
+            <a href="/delete/<%=employee._id%>" type="button" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
